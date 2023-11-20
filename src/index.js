@@ -4,7 +4,7 @@ import config from './config.js';
 const app = express();
 let server = null;
 
-consol.log ('Hello, OTUS!')
+console.log ('Hello, OTUS!')
 
 app.get('/hello/:name', (req, res) => {
   const { name } = req.params;
