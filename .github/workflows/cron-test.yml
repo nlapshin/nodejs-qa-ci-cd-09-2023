@@ -1,19 +1,14 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
-name: Main pipeline
+name: Cron pipeline
 
 on:
   workflow_dispatch:
 
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
   schedule:
     # Каждый день в 6 и 18 часов запускать pipeline
-    - cron: '* 7,17 * * 1-5'
+    - cron: '* 6,18 * * 1-5'
 
 
 jobs:
