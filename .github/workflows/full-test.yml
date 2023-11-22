@@ -66,19 +66,21 @@ jobs:
         if-no-files-found: error
         path: ./coverage
 
-    # - name: send telegram message on push
-    #   uses: appleboy/telegram-action@master
-    #   with:
-    #     to: -809053253
-    #     token: ${{ secrets.TELEGRAM_TOKEN }}
-    #     photo: ./test.png
-    #     message: |
-    #       ${{ github.actor }} created commit:
-    #       Commit message: ${{ github.event.commits[0].message }}
+    # 5729830381:AAFu2fpZozDESSKAkKnMiXntWa_POrTpYnw
 
-    #       Repository: ${{ github.repository }}
+    - name: send telegram message on push
+      uses: appleboy/telegram-action@master
+      with:
+        to: -809053253
+        token: 5729830381:AAFu2fpZozDESSKAkKnMiXntWa_POrTpYnw
+        photo: ./test.png
+        message: |
+          ${{ github.actor }} created commit:
+          Commit message: ${{ github.event.commits[0].message }}
 
-    #       See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+          Repository: ${{ github.repository }}
+
+          See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
 
     # - name: Upload artifact
     #   uses: actions/upload-pages-artifact@v1
