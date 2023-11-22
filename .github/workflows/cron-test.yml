@@ -6,9 +6,9 @@ name: Cron pipeline
 on:
   workflow_dispatch:
 
-  schedule:
-    # Каждый день в 6 и 18 часов запускать pipeline
-    - cron: '* 6,18 * * 1-5'
+  # schedule:
+  #   # Каждый день в 6 и 18 часов запускать pipeline
+  #   - cron: '* 6,18 * * 1-5'
 
 
 jobs:
